@@ -34,7 +34,7 @@ pipeline{
     
     stage('code quality chcking'){
            steps{
-        withSonarQubeEnv('sonarQubes') {
+        withSonarQubeEnv('sonarQube') {
           sh label: '', script: 'mvn sonar:sonar'
         }
         }
