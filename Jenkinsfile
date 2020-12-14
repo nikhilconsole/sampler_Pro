@@ -8,7 +8,7 @@ pipeline{
         {
             steps{
               git credentialsId: 'gitHUB_credentials', 
-              url: 'https://github.com/CaramelIT-Harindra/reg-form.git'
+              url: 'https://github.com/paddo0404/sample_pro.git'
               echo '#download stage finished'
             }
         }
