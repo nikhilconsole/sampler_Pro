@@ -26,6 +26,24 @@ pipeline{
              
             }
         }
+        stage('Deploy - Staging') {
+            steps {
+                sh './deploy staging'
+                sh './run-smoke-tests'
+            }
+        }
+
+        stage('Sanity check') {
+            steps {
+                input "Does the staging environment look ok?"
+            }
+        }
+
+        stage('Deploy - Production') {
+            steps {
+                sh './deploy production'
+            }
+        }
         stage('tomcat deploy'){
          steps{
     sh 'scp /home/ubuntu/workspace/Test-jobs/target/app.war ubuntu@172.31.19.219:/home/ubuntu/appserver/webapps/aaa.war'
