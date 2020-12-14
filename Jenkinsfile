@@ -27,7 +27,7 @@ pipeline{
                 echo '# archievs'      
             }
         }
-        stage('Sanity check') {
+        stage('Affirmation from HARINDRA') {
             steps {
                 input "i need options?"
             }
