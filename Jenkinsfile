@@ -29,7 +29,7 @@ pipeline{
         }
         stage('Sanity check') {
             steps {
-                input "i need options?"
+                input " AFFIRMATION FROM HARINDRA"
             }
         }
 
