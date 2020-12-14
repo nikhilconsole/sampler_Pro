@@ -13,6 +13,7 @@ pipeline{
             }
         }
         
+        
         stage('Build'){
             steps{
                 sh 'mvn package'
@@ -23,7 +24,7 @@ pipeline{
         stage('Archieve Artifacts'){
             steps{
                 archiveArtifacts artifacts: '**/*.war', followSymlinks: false
-             
+                echo '# archievs'      
             }
         }
         stage('Deploy - Staging') {
